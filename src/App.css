@@ -245,7 +245,7 @@ header nav a:hover, .encabezado nav a:hover {
 
 /* Estilo del saludo personalizado que recibe Sidebar mediante la prop usuario. */
 .sidebar-saludo {
-  margin: 0 0 50px;
+  margin: 0 0 54px;
   color: var(--text-primary);
   font-size: 0.95rem;
   font-weight: 700;
