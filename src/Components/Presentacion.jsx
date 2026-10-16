@@ -1,26 +1,27 @@
-import fotoPerfil from '../imagenes/Usuario.jpg'
-
-function Presentacion() {
+// Presentacion recibe todos los datos del perfil desde App mediante la prop usuario.
+function Presentacion({ usuario }) {
   return (
     <article className="card presentacion delay-1">
-      <img className="presentacion-foto" src={fotoPerfil} alt="Foto de Brandon Esmith Cordoba Ortiz" />
+      {/* La foto y el texto alternativo también vienen del objeto usuario. */}
+      <img className="presentacion-foto" src={usuario.foto} alt={`Foto de ${usuario.nombre}`} />
       <div className="presentacion-contenido">
         <p className="presentacion-etiqueta">Mi perfil</p>
-        <h2>Brandon Esmith Cordoba Ortiz</h2>
-        <p className="presentacion-barrio"><strong>Barrio:</strong> Valencia</p>
+        <h2>{usuario.nombre}</h2>
+        <p className="presentacion-barrio"><strong>Barrio:</strong> {usuario.barrio}</p>
         <div className="presentacion-contacto">
           <h3>Medios de contacto</h3>
           <p>
             <strong>Correo:</strong>{' '}
-            <a href="mailto:bcordobaortiz06@gmail.com">bcordobaortiz06@gmail.com</a>
+            <a href={`mailto:${usuario.correo}`}>{usuario.correo}</a>
           </p>
           <p>
             <strong>Teléfono:</strong>{' '}
-            <a href="tel:3148233833">+57 3148233833</a>
+            {/* Se quitan los espacios del teléfono solo para construir el enlace tel:. */}
+            <a href={`tel:${usuario.telefono.replace(/\s/g, '')}`}>{usuario.telefono}</a>
           </p>
         </div>
         <p className="presentacion-descripcion">
-          Aprendiz del SENA en Análisis y Desarrollo de Software.
+          {usuario.descripcion}
         </p>
       </div>
     </article>
