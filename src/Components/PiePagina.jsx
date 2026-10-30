@@ -1,7 +1,7 @@
 function PiePagina() {
   return (
     <footer className="pie-pagina">
-      Sena - CTPI - 2026
+      © 2026 - Brandon Córdoba · ADSO
     </footer>
   )
 }
