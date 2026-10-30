@@ -1,0 +1,28 @@
+export const tecnologias = [
+    {
+        id:1,
+        icono: '⚛️',
+        titulo: 'React',
+        descripcion: 'Biblioteca de JavaScript para construir interfases',
+        horas: 120,
+        destacada: true,
+    },
+
+    {
+        id:1,
+        icono: '⚡',
+        titulo: 'Vite',
+        descripcion: 'Herramienta que crea, ejecuta y empaqueta el proyecto',
+        horas: 81,
+        destacada: true,
+    },
+    
+    {
+        id:3,
+        icono: '🔎',
+        titulo: 'ESLint',
+        descripcion: 'revisa la calidad del código y encuentra errores de sintaxis y estilo',
+        horas: 220,
+        destacada: true,
+    },
+]
